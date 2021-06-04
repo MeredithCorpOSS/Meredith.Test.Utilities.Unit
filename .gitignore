@@ -1,0 +1,131 @@
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+#
+# User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio 2015 cache/options directory
+.vs/
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# NUNIT
+*.VisualState.xml
+TestResult.xml
+#
+# Build Results of an ATL Project
+[Dd]ebugPS/
+[Rr]eleasePS/
+dlldata.c
+
+# DNX
+project.lock.json
+artifacts/
+
+#Ignore files build by Visual Studio
+*_i.c
+*_p.c
+*_i.h
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
+#
+# ReSharper is a .NET coding add-in
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# Visual Studio cache files
+# files ending in .cache can be ignored
+*.[Cc]ache
+# but keep track of directories ending in .cache
+!*.[Cc]ache/
+
+# Specifically this directory
+Web Sites/Images/Images/js/bundles/*
+
+# Documentation
+Web Services/MeredithWebAPI/MeredithWebAPI/App_Data/*
+
+# All NuGet packages not explicitly added
+binaries/*
+packages/*
+
+Web Sites/Assets/Assets/deployables/*
+
+# Node modules
+node_modules*/
+
+# Sass
+.sass-cache*/
+Web Sites/Assets/Assets/kss-node/sass/partials/svg/css*/
+
+# Assets Generated CSS?
+Web Sites/Assets/Assets/kss-node/css/*
+
+# Styleguide
+Web Sites/Assets/Assets/kss-node/styleguide*/
+
+# Legacy site precompiled folder
+Web Sites/Meredith/PrecompiledWeb/*
+
+
+# Vagrant Machines
+**/.vagrant/
+
+# Visual Studio Test results
+*.TE.Tests.mdf
+*.TE.Tests_log.ldf
+
+# Diff Editor Leftovers...mmmm, meatloaf
+*.orig
+
+# BuildScripts Test results
+BuildScripts/TestResult.xml
+
+# OSX
+.DS_Store
+
+# Ignore FAKE related files
+.fake/**
