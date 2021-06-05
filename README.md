@@ -1,2 +1,2 @@
 # Meredith.Test.Utilities.Unit
-Automocking Testing Utilities using Moq
+.net core, test framework agnostic, automocking testing utilities (using Moq)
