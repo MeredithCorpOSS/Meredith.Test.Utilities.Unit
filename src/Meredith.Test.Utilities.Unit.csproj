@@ -2,6 +2,9 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;netstandard2.1;net50</TargetFrameworks>
+    <PackageId>Meredith.Test.Utilities.Unit</PackageId>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/MeredithCorpOSS/Meredith.Test.Utilities.Unit/</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
