@@ -1,0 +1,35 @@
+on:
+  push:
+    tags:
+    - "v[0-9]+.[0-9]+.[0-9]+"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+	- name: Set VERSION variable from tag
+      run: echo "VERSION=${GITHUB_REF/refs\/tags\/v/}" >> $GITHUB_ENV
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Setup dotnet core 2
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '2.1.x'
+    - name: Setup dotnet core 3
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '3.1.x'
+    - name: Setup dotnet 5
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '5.0.x'
+    - name: Build
+      run: dotnet build --configuration Release /p:Version=${VERSION}
+    - name: Test
+      run: dotnet test --configuration Release --no-build
+    - name: Build solution and generate NuGet package
+      run: dotnet pack -c Release -o out /p:Version=${VERSION} --no-build --output
+    - name: Push generated package to nuget registry
+      run: dotnet nuget push NuGet.Workflow.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_TOKEN}
+      env:
+        NUGET_TOKEN: ${{ secrets.NUGETPUBLISHKEY }}
