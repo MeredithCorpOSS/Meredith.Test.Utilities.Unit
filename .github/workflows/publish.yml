@@ -30,6 +30,6 @@ jobs:
     - name: Build solution and generate NuGet package
       run: dotnet pack -c Release -o out /p:Version=${VERSION} --no-build --output
     - name: Push generated package to nuget registry
-      run: dotnet nuget push NuGet.Workflow.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_TOKEN}
+      run: dotnet nuget push Meredith.Test.Utilities.Unit.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_TOKEN}
       env:
         NUGET_TOKEN: ${{ secrets.NUGETPUBLISHKEY }}
